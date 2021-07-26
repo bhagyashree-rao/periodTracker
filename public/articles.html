@@ -1,0 +1,250 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+    <head>
+        <title>SPOT Articles</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <meta name="google-signin-client_id" content="765901429520-ip0fidhnbe4blubagtho5ig1oh6sie99.apps.googleusercontent.com">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel = "stylesheet" href = "assets/css/bsNavbarPT.css">
+        <link href="assets/css/signin.css" rel="stylesheet">
+        <style>
+            ::-webkit-scrollbar{width :8px;}
+            ::-webkit-scrollbar-thumb{border-radius: 5px;background-color: #c2c9d2;}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #b71c1c;" loggedin = "true">
+            <img src = "assets/images/logo.png" alt = "SPOT" style = "width : 50px;height : 30px">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"onclick = "loggedin();" >Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/articles.html">Articles</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#contactUs" data-toggle="modal" data-target="#modalContactForm" >Contact Us</a>
+                </li>
+              </ul>
+              
+                
+                
+            </div>
+          
+          </nav>
+          <div>
+          <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #CB3A50 ;" id = "loggedin-navbar" loggeind ="">
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/calendarLea.html">Calendar <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/logData.html">Logs</a>
+                  </li>
+                  <li class = "nav-item active">
+                    <a class = "nav-link" href = "#" data-toggle="modal" data-target="#myModalForMedicine">Medicines</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/chats.html">Chat</a>
+                  </li>
+                </ul>
+              </div>
+              </nav>
+            </div>
+              <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body mx-3">
+                  <div class="md-form mb-5">
+                      <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="form34" class="form-control validate">
+                    
+                  </div>
+          
+                  <div class="md-form mb-5">
+                      <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="form29" class="form-control validate">
+                    
+                  </div>
+          
+                  <div class="md-form mb-5">
+                      <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <input type="text" id="form32" class="form-control validate">
+          
+                  </div>
+          
+                  <div class="md-form">
+                      <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                      <i class="fas fa-pencil prefix grey-text"></i>
+                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                    
+                  </div>
+          
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <button class="btn btn-unique btn-block" style="background-color: #b71c1c;color: #fff;">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class = "blog area">
+            <div class = "container">
+              <p class = "article-p"><b>LATEST ARTICLES</b></p>
+              <div class = "row" id = "article-rows">
+                <div class = "col-lg-4 col-md-6">
+                  <div class = "card h-100">
+                    <div class = "single-post post-style-1">
+                      <div class = "blog image">
+                        <img src = "assets/images/How does stress affect periods.png" alt = "blog image" >
+                      </div>
+                      <div class = "blog info">
+                        <h4 class = "title">
+                          <a href = "#" id = "3" data-toggle="modal" data-target="#exampleModal" onclick = "articlebody(3);" >
+                            <b>How does stress affect periods?</b>
+                          </a>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "col-lg-4 col-md-6">
+                  <div class = "card h-100">
+                    <div class = "single-post post-style-1">
+                      <div class = "blog image">
+                        <img src = "assets/images/What Helps Period Pain.png" alt = "blog image" >
+                      </div>
+                      <div class = "blog info">
+                        <h4 class = "title">
+                          <a href = "#" id = "2" data-toggle="modal" data-target="#exampleModal" onclick = "articlebody(2);">
+                            <b>What Helps Period Pain?</b>
+                          </a>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "col-lg-4 col-md-6">
+                  <div class = "card h-100">
+                    <div class = "single-post post-style-1">
+                      <div class = "blog image">
+                        <img src = "assets/images/Can women exercise on their period.png" alt = "blog image">
+                      </div>
+                      <div class = "blog info">
+                        <h4 class = "title">
+                          <a href = "#" id = "1" data-toggle="modal" data-target="#exampleModal" onclick = "articlebody(1);">
+                            <b>Can women exercise on their period?</b>
+                          </a>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </section>
+        <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabelh5"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id = "modalbody" >
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabelh51"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id = "modalbody1" >
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabelh52"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id = "modalbody2" >
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal" tabindex="-1" role="dialog" id = "myModalForMedicine">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">MEDICINES</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="sel1">Select list (select one):</label>
+                        <select class="form-control" id="sel1">
+                            <option id = "1">Menstrual Pain</option>
+                            <option id = "2">Irregular Periods</option>
+                            <option id = "3">Missing Periods</option>
+                        </select>
+                      </div>
+                      <p id = "medicine">Diclofenac<br>Ibuprofen<br>Ketoprofen<br>Meclofenamate<br>Mefenamic acid<br>Naproxen</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script src = 'assets/js/articles.js'></script>
+    </body>
+</html>

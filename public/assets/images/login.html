@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1 {
+	text-align: center;
+}
+body {
+  font-family: Arial, Helvetica,sans-serif;
+  text-align: center;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+.loginbtn {
+  background-color: #b71c1c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+</style>
+<body>
+	<h1>Please enter your personal details</h1>
+    <form action="/action_page.php" method="post">
+			<label>Last period log: 
+			<input type="date">
+		    </label>
+			</br><br>
+			<label>Average cycle length: 
+			<input type="text" name="number">
+			</label>
+			</br><br>
+			<label>Average no. of days between 2 periods: 
+			<input type="text" name="number">
+			</label>
+			</br><br>
+			<label>Are your periods regular or irregular? : 
+			</label>
+			<label>Regular</label><input type="radio" name="button">
+			<label>Irregular</label><input type="radio" name="button">
+			</br><br>
+			<label>Enter your age:
+			<input type="text" name="number"></label>
+			</br><br>
+			<label for="datemin">Enter date of birth
+  <input type="date"></label><br><br>
+  <button type="submit" class="loginbtn">Sign in</button>
+  </div>
+		</form>
+</body>
+</html>
